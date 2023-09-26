@@ -1,0 +1,331 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+
+
+\usepackage{ifthen}
+
+\newboolean{lightmode}
+\setboolean{lightmode}{true} % change this to false for dark mode
+
+\ifthenelse{\boolean{lightmode}}
+{\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}}
+{\usepackage[hidelinks]{hyperref}}
+
+\hypersetup{
+pdftitle={Shimanto Bhowmik's Resume},
+pdfsubject={Resume},
+pdfauthor={Shimanto Bhowmik},
+pdfkeywords={Software engineer, Computer science, full-stack engineer, backend engineer}
+}
+
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\ifthenelse{\boolean{lightmode}} {
+%%%%%% Light mode %%%%%%
+\definecolor{pagecolor}{RGB}{255,255,255} % dark gray
+\definecolor{fontcolor}{RGB}{0,0,0} % white
+\definecolor{linkcolor}{RGB}{13,110,253} % white
+%%%%% END light mode %%%%%
+}
+{
+%%%%%% Dark Mode %%%%%%
+\definecolor{pagecolor}{RGB}{27, 27, 27} % dark gray
+\definecolor{fontcolor}{RGB}{255, 255, 255} % white
+\definecolor{linkcolor}{RGB}{128, 159, 255} % white
+%%%%% END dark mode %%%%%
+}
+
+\usepackage{pagecolor}
+\pagecolor{pagecolor}
+\color{fontcolor}
+
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{fontcolor}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% OLD \renewcommand{\labelitemii}{$\circ$}
+% New
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+\begin{center}
+    \textbf{\Huge \scshape Shimanto Bhowmik} \\ \vspace{1pt}
+    \href{https://shimantobhowmik.github.io}{\small{https://shimantobhowmik.github.io}} $|$ 
+    \href{mailto:sb6778@g.rit.edu}{\small{sb6778@g.rit.edu}} $|$ 
+    \href{https://www.linkedin.com/in/shimantobhowmik/}{\small{linkedin/shimanto-bhowmik}} $|$ 
+    \href{https://github.com/ShimantoBhowmik}{\small{GitHub/ShimantoBhowmik}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+% \section{Objective}
+% \resumeSubHeadingListStart
+% \resumeItem{To obtain a co-op position in software developement. Available
+% May 9 -- August 19 }
+% \resumeSubHeadingListEnd
+
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Rochester Institute of Technology}{Rochester, N.Y.}
+{Bachelor of Science in Computer Science}{Aug. 2021 -- May 2026}
+\resumeItem{Cumulative GPA: 4.0/4.0}
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Python, Java, C, C++, SQL (Postgres), JavaScript, HTML/CSS, TypeScript, Bash, Assembly} \\
+        \textbf{Frameworks}{: Angular, React, Node.js, Spring Boot, NestJS} \\
+        \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, Maven, IntelliJ, Jupyter Notebook, AWS} \\
+        \textbf{Other}{: Unix, CI/CD, Machine Learning, Natural language processing, Neural Networks, Tensorflow}
+    }}
+\end{itemize}
+\vfill
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Machine Learning Engineer}{September 2023 -- December 2023}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{Sage AI}{Remote}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Utilizing large language models to build advanced financial analysis tools, empowering organizations with comprehensive data-driven insights and informed decision-making capabilities.}
+\resumeItem{Leveraging React, Python, nest-js, and lang chain to automate tasks and develop scalable software solutions, driving efficiency and productivity in complex financial environments of the future.}
+\resumeItem{Implemented efficient data ingestion processes for SEC filings and enhanced model interactivity, optimizing data-driven decision-making.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading 
+{Software Development Engineer Intern}{May 2023 -- August 2023}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{Amazon Alexa}{Seattle, WA.}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Accelerated the evaluation of state-of-the-art large language models, improving their performance by 20\% based on predefined criteria to inform strategic decision-making and advance language model technologies.}
+\resumeItem{Developed infrastructure empowering scientists to conduct rapid experimentation of large language models, resulting in 30\% reduction in testing time and driving innovation in language model research and development.}
+\resumeItem{Designed and implemented a metric system to analyze model performance, resource efficiency, and latency.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Student Lab Instructor}{August 2022 -- May 2023}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{Rochester Institute of Technology}{Rochester, N.Y.}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Mentored 25 students every week, help them debug and analyze code for homework and projects, and use CS fundamentals expertise in order to help advance their knowledge while promoting a helpful environment.}
+\resumeItem{Graded assignments and provide detailed feedback for about 50 students to help them improve future submissions and learn from shortcomings.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Section Leader}{April 2023 -- June 2023}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{Stanford University}{Remote}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Volunteered as a Section Leader for Stanford's Code in Place course, guiding 25 diverse students through Python programming fundamentals and providing feedback on assignments.}
+\resumeItem{Collaborated with instructors and Section Leaders to create a supportive learning environment resulting in 90\% retention rates and positive student feedback.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Research Assistant}{Jan 2022 -- May 2022}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{Department of Computing Security, Rochester Institute of Technology}{Rochester, N.Y.}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Implemented Python programs and scripts to automate critical processes, streamlining operations and eliminating manual tasks, including the automation of Excel functions.}
+\resumeItem{Programmed server-side databases using MySQL and socket programming, while also implementing an improved Shamir's Secret Sharing Scheme to simulate realistic data exchange among SmartMeters, Aggregators, and Electrical Utility Units on Raspberry Pis.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+\resumeSubHeadingListStart
+\resumeSubheading
+{Resident Advisor}{Jan 2022 -- Current}
+{\vspace{-20pt}}{\vspace{-20pt}}
+\vspace{-10pt}
+\resumeSubheading
+{RIT Center for Residence Life}{Rochester, N.Y.}
+{}{}
+\resumeItemListStart
+\vspace{-10pt}
+\resumeItem{Connected residential students’ needs and interests to community engagement and leadership opportunities on campus and beyond.}
+\resumeItem{Led crisis management initiatives while cultivating self-advocacy skills through experiential learning programs.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+
+
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \labelitemii{ Outstanding 1st Year Student Scholarship Award -}{ RIT} \\
+        \labelitemii{ Asia Pacific ICT Award (APICTA) -}{ China} \\
+        \labelitemii{ Bangladesh Association of Software & Information Services -}{ National ICT Award} \\
+    }}
+\end{itemize}
+\vfill
+
+%-----------PROJECTS-----------
+% \section{Projects}
+% \resumeSubHeadingListStart
+
+% \resumeProjectHeading
+% {\textbf{{{Deshi Food}}}
+%     \href{https://dulcet-cassata-553237.netlify.app/}{(\textcolor{linkcolor}{Link})} {}}{}
+% \resumeItemListStart
+% \resumeItem{E-commerce model-based restaurant website built using React, Redux, Sass, Firebase, and deployed on Netlify.}
+% \resumeItem{Migrated codebase to Typescript, improving code quality, maintainability, and safety.}
+% \resumeItemListEnd
+
+% \resumeProjectHeading
+% {\textbf{{{Math Mania}}}
+%     \href{https://shimantobhowmik.github.io/MathMania/}{(\textcolor{linkcolor}{Link})} {}}{}
+% \resumeItemListStart
+% \resumeItem{Created a gamified approach to teach my 7-year-old niece how to add/subtract. Built by training an AI model on the MNIST dataset to recognize handwritten numbers from 0 to 9, then used TensorFlow to classify the handwritten digits and visualized the model over time using TensorBoard to analyze performance.}
+% \resumeItem{Converted the model to TensorFlow.js to create a math-based game on HTML, CSS, JS where the model was used to estimate digits drawn on the HTML Canvas.}
+% \resumeItemListEnd
+
+
+
+%-------------------------------------------
+\end{document}
